@@ -12,6 +12,7 @@ import { PhotographyComponent } from './photography/photography.component';
 import { ProductListComponent} from "./photography/product-list/product-list.component";
 import { FilterCategoryComponent} from "./photography/filter-category/filter-category.component";
 import { FilterPriceRangeComponent} from "./photography/filter-price-range/filter-price-range.component";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FilterPriceRangeComponent} from "./photography/filter-price-range/filte
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

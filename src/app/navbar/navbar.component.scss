@@ -1,0 +1,19 @@
+.group-img{
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+hr{
+  border: 4px solid #E4E4E4;
+}
+
+@media (max-width: 600px) {
+  hr{
+    width: 470px;
+  }
+  .group-img{
+    width: 32px;
+    height: 32px;
+  }
+}
