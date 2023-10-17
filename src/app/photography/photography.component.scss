@@ -1,0 +1,36 @@
+.phptography-sector-title{
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.sorting-price{
+  height: 24px;
+}
+hr{
+ border: 4px solid #cbcaca;
+}
+img{
+  width: 16px;
+  height: 18px;
+  margin-left: 15px;
+}
+.filter{
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .phptography-sector-title{
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+  }
+  .sorting-price{
+    visibility: hidden;
+  }
+  .filter{
+    cursor: pointer;
+    visibility: visible;
+    width: 29px;
+    height: 29px;
+  }
+}

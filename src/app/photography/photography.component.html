@@ -1,3 +1,27 @@
 <div class="container">
-<p>photography works!</p>
+  <hr>
+  <div class="row mt-5">
+    <div class="col text-start phptography-sector-title">
+      <p>Photography / <span class="text-secondary"> Premium Photos</span></p>
+    </div>
+    <div class="col d-flex justify-content-end sorting-price">
+      <img src="../../assets/images/sort.png">
+      <p class="text-secondary px-2">Sort By <span class="text-black px-2">Price</span></p>
+      <img src="../../assets/images/Vector 16.png">
+      <div class="filter">
+        <img src="../../assets/images/filter.png">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-3">
+      <app-filter-category></app-filter-category>
+      <div class="mt-5">
+        <app-filter-price-range></app-filter-price-range>
+      </div>
+    </div>
+    <div class="col-9">
+      <app-product-list></app-product-list>
+    </div>
+  </div>
 </div>
