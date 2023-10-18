@@ -5,13 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from "@angular/fire/compat";
 import { environment } from "../environments/environment";
-import { NavbarComponent } from './navbar/navbar.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { PhotographyDetailsComponent } from './photography-details/photography-details.component';
-import { PhotographyComponent } from './photography/photography.component';
-import { ProductListComponent} from "./photography/product-list/product-list.component";
-import { FilterCategoryComponent} from "./photography/filter-category/filter-category.component";
-import { FilterPriceRangeComponent} from "./photography/filter-price-range/filter-price-range.component";
+import { NavbarComponent} from "./components/navbar/navbar.component";
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { PhotographyDetailsComponent} from "./components/photography-details/photography-details.component";
+import { PhotographyComponent} from "./components/photography/photography.component";
+import { ProductListComponent} from "./components/photography/product-list/product-list.component";
+import { FilterCategoryComponent} from "./components/photography/filter-category/filter-category.component";
+import { FilterPriceRangeComponent} from "./components/photography/filter-price-range/filter-price-range.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatCardModule } from "@angular/material/card";
@@ -25,7 +25,8 @@ import { MatCardModule } from "@angular/material/card";
     PhotographyComponent,
     ProductListComponent,
     FilterCategoryComponent,
-    FilterPriceRangeComponent
+    FilterPriceRangeComponent,
+    MainContentComponent
   ],
     imports: [
         BrowserModule,
