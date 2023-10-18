@@ -1,0 +1,2 @@
+Run json-server to show the list of products with the command:
+json-server --watch src/data/db.json
