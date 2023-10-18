@@ -1,0 +1,52 @@
+.example-card {
+  max-width: 282px;
+  box-sizing: border-box;
+  position: relative;
+  height: 514px;
+}
+.mat-img{
+  position: relative;
+  display: inline-block;
+}
+.mat-btn{
+  background-color: black;
+  color: white;
+  width: 250px;
+  position: absolute;
+  bottom: 150px;
+  margin-left: -5px;
+  margin-bottom: 45px;
+  font-size: 23px;
+  font-family: Archivo;
+  font-weight: 500;
+}
+.img-category{
+  font-weight: 700;
+  font-size: 22px;
+}
+.img-name{
+  font-weight: 700;
+  font-size: 34px;
+}
+.img-price{
+  font-size: 29px;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+ .example-card{
+   width: 800px !important;
+   height: 661.05px;
+   margin-left: -90px;
+ }
+  .mat-img{
+    width: 400px;
+  }
+  .mat-btn{
+    bottom: 51px;
+    width: 100%;
+  }
+  .img-price{
+    font-size: 31.55px;
+  }
+}

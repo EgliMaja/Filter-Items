@@ -13,6 +13,8 @@ import { ProductListComponent} from "./photography/product-list/product-list.com
 import { FilterCategoryComponent} from "./photography/filter-category/filter-category.component";
 import { FilterPriceRangeComponent} from "./photography/filter-price-range/filter-price-range.component";
 import { MatButtonModule } from "@angular/material/button";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { MatButtonModule } from "@angular/material/button";
     FilterCategoryComponent,
     FilterPriceRangeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    MatButtonModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        MatButtonModule,
+        MatCheckboxModule,
+        MatCardModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
