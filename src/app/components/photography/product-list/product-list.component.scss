@@ -3,6 +3,7 @@
   box-sizing: border-box;
   position: relative;
   height: 514px;
+  padding: 33px;
 }
 .mat-img{
   position: relative;
@@ -15,11 +16,18 @@
   position: absolute;
   bottom: 150px;
   margin-left: -5px;
-  margin-bottom: 45px;
+  margin-bottom: 10px;
   font-size: 23px;
   font-family: Archivo;
   font-weight: 500;
+  opacity: 0;
+  transition: .2s ease;
 }
+
+.example-card:hover .mat-btn {
+  opacity: 1;
+}
+
 .img-category{
   font-weight: 700;
   font-size: 22px;
@@ -31,6 +39,21 @@
 .img-price{
   font-size: 29px;
   font-weight: 400;
+}
+.overlay-text{
+  width: 127.4px;
+  height: 29.17px;
+}
+.text-overlay-img{
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  position: absolute;
+  bottom: 450px;
+  left: 10px;
+  background-color: white;
+  opacity: 1;
+  padding: 10px;
 }
 
 @media (max-width: 600px) {

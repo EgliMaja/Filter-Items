@@ -1,97 +1,22 @@
 <div class="row d-flex justify-content-center mt-3">
-  <div class="col-sm-3">
+  <div *ngFor="let product of productList" class="col-sm-4">
     <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Group 4.png" alt="Details">
+      <img mat-card-image class="mat-img"
+           [src]="product.image.src"
+           [width]="product.details?.dimmentions?.width"
+           [height]="product.details?.dimmentions?.height"
+           alt="Details">
+      <div *ngIf="product.bestseller" class="overlay-text">
+        <p class="text-overlay-img">{{"best seller" | titlecase}}
+      </div>
       <mat-card-content class="mat-card-content">
         <div class="row">
           <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
         </div>
         <div class="row">
-          <p class="img-category text-secondary mb-4">People</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary ">$3.89</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <div class="col-sm-3">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Rectangle 2.png" alt="Details">
-      <mat-card-content >
-        <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">Architecutre</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary">$93.89</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <div class="col-sm-3">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Rectangle 2.4.png" alt="Details">
-      <mat-card-content>
-        <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">Food</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary">$93.89</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</div>
-
-<div class="row d-flex justify-content-center">
-  <div class="col-sm-3">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Rectangle 2.5.png" alt="Details">
-      <mat-card-content>
-        <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">Art</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary">$100.00</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <div class="col-sm-3">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Rectangle 2.png" alt="Details">
-      <mat-card-content>
-        <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">People</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary">$101.00</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-
-  <div class="col-sm-3">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img" src="../../assets/images/Rectangle 2.4.png" alt="Details">
-      <mat-card-content>
-        <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">Architecture</p>
-          <p class="img-name mb-3">Red Banch</p>
-          <p class="img-price text-secondary">$101.00</p>
+          <p class="img-category text-secondary mb-4">{{product.category | titlecase}}</p>
+          <p class="img-name mb-3">{{product.name}}</p>
+          <p class="img-price text-secondary ">${{product.price}}</p>
         </div>
       </mat-card-content>
     </mat-card>

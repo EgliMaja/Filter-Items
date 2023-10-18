@@ -1,0 +1,371 @@
+{
+  "products": [
+    {
+      "name": "Red Bench",
+      "category": "people",
+      "price": 3.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3150547.jpeg",
+        "alt": ""
+      },
+      "bestseller": true,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Girl",
+      "category": "food",
+      "price": 93.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-596893.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Animal",
+      "category": "premium",
+      "price": 3.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-678444.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Cooking",
+      "category": "food",
+      "price": 100,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-1153369.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Nature",
+      "category": "landmarks",
+      "price": 189,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3070989.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Samurai King Restling",
+      "category": "landmarks",
+      "price": 102,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/group2.jpg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": true,
+      "details": {
+        "dimmentions": {
+          "width": 283,
+           "height": 335
+        },
+        "description": "\"So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder \\n\" +\n        \"\\n\" +\n  \"text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock.\"",
+        "recomandations": [
+          {
+            "src": "",
+            "alt": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "Leaf",
+      "category": "cities",
+      "price": 113.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3150553.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Family",
+      "category": "nature",
+      "price": 32.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3934006.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Ferry",
+      "category": "nature",
+      "price": 83.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-7528547.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Flower",
+      "category": "people",
+      "price": 43.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-8286736.png",
+        "alt": ""
+      },
+      "bestseller": true,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Penthouse",
+      "category": "food",
+      "price": 53.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-18587778.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Autumn Leafs",
+      "category": "pets",
+      "price": 10.29,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3150553.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Dog",
+      "category": "premium",
+      "price": 13.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/group2.jpg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Girl Sky",
+      "category": "landmarks",
+      "price": 19,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-596893.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Pet Love",
+      "category": "premium",
+      "price": 78.9,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-678444.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Trees Nature",
+      "category": "pets",
+      "price": 159,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-1088295.jpeg",
+        "alt": ""
+      },
+      "bestseller": true,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Girl Cooking",
+      "category": "people",
+      "price": 19,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-1153369.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Red Bench",
+      "category": "people",
+      "price": 35.9,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-3150553.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Art",
+      "category": "nature",
+      "price": 15.23,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-7528547.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    },
+    {
+      "name": "Design",
+      "category": "cities",
+      "price": 389,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-18587778.png",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      }
+    }
+  ]
+}
