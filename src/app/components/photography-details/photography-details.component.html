@@ -1,35 +1,31 @@
-<div class="container mt-5">
+<div class="container mt-5" *ngFor="let featured of featuredProduct">
   <div class="row">
     <div class="col text-start">
-      <p class="about-image-name">{{"about the samurai king resting" | titlecase}}</p>
+      <p class="about-image-name">{{"about "+ featured.name| titlecase}}</p>
     </div>
     <div class="col text-end">
       <p class="text-about-selling">People also buy</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-7">
+    <div  class="col-7">
       <div class="img-title">
-        <p class="text-secondary"><strong>{{"Pets"}}</strong></p>
+        <p class="text-secondary"><strong>{{featured.category}}</strong></p>
       </div>
       <div class="img-description">
-        <p class="text-secondary">{{"So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder \n" +
-        "\n" +
-        "text to mockup various fonts for a type specimen book.So how did the classical Latin become so incoherent? According to McClintock."}}</p>
+        <p
+          class="text-secondary">{{featured.details.description}}</p>
       </div>
     </div>
-    <div class="col-5">
-      <div class="group-best-sales text-end">
-        <img src="../../assets/images/Rectangle10.png" class="best-sales-img">
-        <img src="../../assets/images/Rectangle101.png" class="best-sales-img">
-        <img src="../../assets/images/Rectangle102.png" class="best-sales-img">
+    <div *ngFor="let product of bestsellerProducts" class="col">
+      <div class="group-best-sales text-start">
+        <img [src]="product.image.src" class="best-sales-img">
       </div>
-
-      <div class="detail-group-sales text-end mt-5">
-        <p class="Details"><strong>{{"Details"}}</strong></p>
-        <p class="text-secondary">Size: 1020 x 1020 pixel</p>
-        <p class="text-secondary">Size: 15 mb</p>
-      </div>
+    </div>
+    <div class="detail-group-sales text-end mt-5">
+      <p class="Details"><strong>{{"Details"}}</strong></p>
+      <p class="text-secondary">Size: 1020 x 1020 pixel</p>
+      <p class="text-secondary">Size: 15 mb</p>
     </div>
   </div>
 </div>

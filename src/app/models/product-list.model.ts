@@ -7,6 +7,7 @@ export interface ProductListModel {
   bestseller: boolean;
   featured: boolean;
   details: AboutProductModel;
+  id?:number;
 }
 
 export interface ImageModel {

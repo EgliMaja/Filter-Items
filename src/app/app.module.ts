@@ -13,8 +13,11 @@ import { FilterPriceRangeComponent} from "./components/photography/filter-price-
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatCardModule } from "@angular/material/card";
-import {HttpClientModule} from "@angular/common/http";
-import {ObserversModule} from "@angular/cdk/observers";
+import { HttpClientModule } from "@angular/common/http";
+import { ObserversModule } from "@angular/cdk/observers";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import {ObserversModule} from "@angular/cdk/observers";
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
+    MatMenuModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

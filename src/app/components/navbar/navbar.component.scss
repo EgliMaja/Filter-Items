@@ -7,7 +7,59 @@
 hr{
   border: 4px solid #E4E4E4;
 }
+.mat-menu{
+  border: 4px solid #dfdede;
+  margin-top: -53px;
+  overflow: unset;
+}
 
+.title-image{
+  font-weight: 700;
+  font-size: 20px;
+}
+.price{
+  font-weight: 400;
+  font-size: 29px;
+}
+.close-icon{
+  width: 18px;
+  height: 18px;
+}
+.img-card{
+  width: 149px;
+  height: 86px;
+}
+.mat-stroked-button{
+  border: 3px solid black;
+  font-family: Archivo;
+  font-weight: 500;
+  font-size: 23px;
+}
+::ng-deep .cdk-overlay-pane{
+  overflow: hidden;
+
+}
+::ng-deep .mat-menu-panel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 435px;
+  height: 100%;
+  margin-top: 17px;
+  border: 3px solid #F8F8F8;
+}
+.product-length{
+  width: 21px;
+  height: 22px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  margin-left: 1270px;
+}
+.total-number{
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
 @media (max-width: 600px) {
   hr{
     width: 470px;

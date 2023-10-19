@@ -3,15 +3,15 @@
     <mat-card class="example-card mb-5">
       <img mat-card-image class="mat-img"
            [src]="product.image.src"
-           [width]="product.details?.dimmentions?.width"
-           [height]="product.details?.dimmentions?.height"
+           [width]="product.details.dimmentions.width"
+           [height]="product.details.dimmentions.height"
            alt="Details">
       <div *ngIf="product.bestseller" class="overlay-text">
         <p class="text-overlay-img">{{"best seller" | titlecase}}
       </div>
       <mat-card-content class="mat-card-content">
         <div class="row">
-          <button mat-raised-button class="mat-btn">{{"add to cart" | uppercase}}</button>
+          <button mat-raised-button class="mat-btn" (click)="saveProductToCard(product)">{{"add to cart" | uppercase}}</button>
         </div>
         <div class="row">
           <p class="img-category text-secondary mb-4">{{product.category | titlecase}}</p>

@@ -9,6 +9,7 @@
   background-color: black;
   height: 47px;
   width: 257px;
+  overflow: auto;
 }
 
 .photoOfTheDay{
@@ -22,14 +23,13 @@
   font-family: Inter;
   font-weight: 400;
   position: absolute;
-  bottom: -37px;
+  bottom: -77px;
   background-color: white;
   opacity: 1;
   padding: 20px;
   display: flex;
   justify-content: start;
 }
-
 
 @media (max-width: 600px) {
 
