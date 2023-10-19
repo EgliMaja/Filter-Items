@@ -18,6 +18,7 @@ import { ObserversModule } from "@angular/cdk/observers";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { NgxPaginationModule } from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     MatMenuModule,
     MatDialogModule,
     MatSnackBarModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

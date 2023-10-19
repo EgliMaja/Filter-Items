@@ -73,3 +73,46 @@
     font-size: 31.55px;
   }
 }
+
+//design for paginator
+::ng-deep {
+  .ngx-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .ngx-pagination li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: black;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ngx-pagination li.current {
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  li.small-screen {
+    display: none !important;
+  }
+
+  .pagination-previous,
+  .pagination-next {
+    a, span {
+      display: none !important;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
