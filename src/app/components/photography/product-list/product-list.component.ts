@@ -1,8 +1,8 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ProductListModel } from "../../../models/product-list.model";
 import { ProductListService } from "../../../services/product-list.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import {Subject} from "rxjs";
+import { Subject, takeUntil } from "rxjs";
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +12,8 @@ import {Subject} from "rxjs";
 
 export class ProductListComponent implements OnInit , OnDestroy{
 
-  productList!: ProductListModel[];
+  @Input() selectedOptionSorting:string = '';
+  productList: ProductListModel[] = [];
   page: number = 1;
   productPerPage: number = 6;
   private destroy$: Subject<boolean> = new Subject<boolean>();
@@ -27,10 +28,14 @@ export class ProductListComponent implements OnInit , OnDestroy{
   }
 
   ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.complete();
   }
 
   getProducts(){
-    this.productService.getAllProductList().subscribe({
+    this.productService.getAllProductList().pipe(
+      takeUntil(this.destroy$.asObservable())
+    ).subscribe({
       next:(res)=>{
         this.productList = res;
       },
@@ -39,7 +44,6 @@ export class ProductListComponent implements OnInit , OnDestroy{
       }
     })
   }
-
 
   saveProductToCard(product: ProductListModel){
     this.productService.saveProductToCard(product).subscribe({
@@ -52,11 +56,8 @@ export class ProductListComponent implements OnInit , OnDestroy{
     })
   }
 
-
-
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
   }
-
 
 }

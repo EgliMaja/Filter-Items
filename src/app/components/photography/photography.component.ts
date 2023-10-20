@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductListModel } from "../../models/product-list.model";
+import { FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-photography',
@@ -9,10 +9,20 @@ import { ProductListModel } from "../../models/product-list.model";
 
 export class PhotographyComponent implements OnInit {
 
-  constructor() { }
+  selectForm!: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.filterForm();
   }
 
+  filterForm(){
+    this.selectForm = this.formBuilder.group({
+      selectSortingOption: [''],
+    })
+  }
 
 }

@@ -1,27 +1,30 @@
 <div class="row d-flex justify-content-center mt-3">
-  <div *ngFor="let product of productList | paginate: {itemsPerPage : productPerPage , currentPage : page}" class="col-sm-4">
-    <mat-card class="example-card mb-5">
-      <img mat-card-image class="mat-img"
-           [src]="product.image.src"
-           [width]="product.details.dimmentions.width"
-           [height]="product.details.dimmentions.height"
-           alt="Details">
-      <div *ngIf="product.bestseller" class="overlay-text">
-        <p class="text-overlay-img">{{"best seller" | titlecase}}
-      </div>
-      <mat-card-content class="mat-card-content">
-        <div class="row">
-          <button mat-raised-button class="mat-btn" (click)="saveProductToCard(product)">{{"add to cart" | uppercase}}</button>
-        </div>
-        <div class="row">
-          <p class="img-category text-secondary mb-4">{{product.category | titlecase}}</p>
-          <p class="img-name mb-3">{{product.name}}</p>
-          <p class="img-price text-secondary ">${{product.price}}</p>
-        </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="mt-3 d-flex justify-content-center">
-    <pagination-controls (pageChange)="page = $event"></pagination-controls>
-  </div>
+    <div *ngFor="let product of productList |
+       productSort: selectedOptionSorting |
+       paginate: {itemsPerPage : productPerPage , currentPage : page}" class="col-sm-4">
+        <mat-card class="example-card mb-5">
+            <img mat-card-image class="mat-img"
+                 [src]="product.image.src"
+                 [width]="product.details.dimmentions.width"
+                 [height]="product.details.dimmentions.height"
+                 alt="Details">
+            <div *ngIf="product.bestseller" class="overlay-text">
+                <p class="text-overlay-img">{{"best seller" | titlecase}}
+            </div>
+            <mat-card-content class="mat-card-content">
+                <div class="row">
+                    <button mat-raised-button class="mat-btn"
+                            (click)="saveProductToCard(product)">{{"add to cart" | uppercase}}</button>
+                </div>
+                <div class="row">
+                    <p class="img-category text-secondary mb-4">{{product.category | titlecase}}</p>
+                    <p class="img-name mb-3">{{product.name}}</p>
+                    <p class="img-price text-secondary ">${{product.price}}</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="mt-3 d-flex justify-content-center">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
 </div>

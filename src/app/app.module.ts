@@ -19,6 +19,11 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { NgxPaginationModule } from "ngx-pagination";
+import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatListModule } from "@angular/material/list";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ProductSortPipe } from "./pipes/sorting.pipe";
 
 @NgModule({
   declarations: [
@@ -30,7 +35,8 @@ import { NgxPaginationModule } from "ngx-pagination";
     ProductListComponent,
     FilterCategoryComponent,
     FilterPriceRangeComponent,
-    MainContentComponent
+    MainContentComponent,
+    ProductSortPipe,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,8 @@ import { NgxPaginationModule } from "ngx-pagination";
     BrowserAnimationsModule,
     HttpClientModule,
     ObserversModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
@@ -45,6 +53,9 @@ import { NgxPaginationModule } from "ngx-pagination";
     MatDialogModule,
     MatSnackBarModule,
     NgxPaginationModule,
+    MatInputModule,
+    MatSelectModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

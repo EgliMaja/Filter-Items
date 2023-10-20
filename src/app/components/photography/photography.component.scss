@@ -17,7 +17,9 @@ img{
 .filter{
   visibility: hidden;
 }
-
+select{
+  border: none;
+}
 @media (max-width: 600px) {
   .phptography-sector-title{
     font-size: 18px;

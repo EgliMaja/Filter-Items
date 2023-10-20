@@ -4,8 +4,8 @@
             <button mat-button [matMenuTriggerFor]="menu">
                 <img src="../../assets/images/Group.jpg" class="group-img">
             </button>
-            <div *ngIf="productList.length >= 1" class="product-length">
-                <p class="total-number">{{productList.length}}</p>
+            <div  class="product-length">
+                <p class="total-number">{{productList?.length}}</p>
             </div>
         </div>
     </div>

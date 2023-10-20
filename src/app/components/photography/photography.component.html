@@ -4,15 +4,25 @@
     <div class="col text-start phptography-sector-title">
       <p>Photography / <span class="text-secondary"> Premium Photos</span></p>
     </div>
-    <div class="col d-flex justify-content-end sorting-price">
+    <div class="col sorting-price d-flex justify-content-end">
       <img src="../../assets/images/sort.png">
-      <p class="text-secondary px-2">Sort By <span class="text-black px-2">Price</span></p>
-      <img src="../../assets/images/Vector 16.png">
+
+      <div class="text-secondary px-2 d-inline ">Sort By
+        <span class="text-black ">
+          <form [formGroup]="selectForm">
+            <select name="selectSortingOption" formControlName="selectSortingOption" (change)="this.selectForm.get('selectSortingOption')?.value" >
+              <option value="price">Price</option>
+              <option value="alphabetical">Alphabet</option>
+            </select>
+          </form>
+        </span>
+      </div>
       <div class="filter">
         <img src="../../assets/images/filter.png">
       </div>
     </div>
   </div>
+
   <div class="row mt-5">
     <div class="col-3 filter-checkobxes">
       <app-filter-category></app-filter-category>
@@ -21,7 +31,7 @@
       </div>
     </div>
     <div class="col-9">
-      <app-product-list></app-product-list>
+      <app-product-list [selectedOptionSorting]="selectForm.get('selectSortingOption')?.value"></app-product-list>
     </div>
   </div>
 </div>
