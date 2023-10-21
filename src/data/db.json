@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Red Bench",
-      "category": "people",
+      "category": "People",
       "price": 3.89,
       "currency": "USD",
       "image": {
@@ -20,7 +20,7 @@
     },
     {
       "name": "Girl",
-      "category": "food",
+      "category": "Food",
       "price": 93.89,
       "currency": "USD",
       "image": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "Animal",
-      "category": "premium",
+      "category": "Premium",
       "price": 3.89,
       "currency": "USD",
       "image": {
@@ -56,7 +56,7 @@
     },
     {
       "name": "Cooking",
-      "category": "food",
+      "category": "Food",
       "price": 100,
       "currency": "USD",
       "image": {
@@ -74,7 +74,7 @@
     },
     {
       "name": "Nature",
-      "category": "landmarks",
+      "category": "Landmarks",
       "price": 189,
       "currency": "USD",
       "image": {
@@ -92,7 +92,7 @@
     },
     {
       "name": "Samurai King Restling",
-      "category": "landmarks",
+      "category": "Landmarks",
       "price": 102,
       "currency": "USD",
       "image": {
@@ -117,7 +117,7 @@
     },
     {
       "name": "Leaf",
-      "category": "cities",
+      "category": "Cities",
       "price": 113.89,
       "currency": "USD",
       "image": {
@@ -135,7 +135,7 @@
     },
     {
       "name": "Family",
-      "category": "nature",
+      "category": "Nature",
       "price": 32.89,
       "currency": "USD",
       "image": {
@@ -153,7 +153,7 @@
     },
     {
       "name": "Ferry",
-      "category": "nature",
+      "category": "Nature",
       "price": 83.89,
       "currency": "USD",
       "image": {
@@ -171,7 +171,7 @@
     },
     {
       "name": "Flower",
-      "category": "people",
+      "category": "People",
       "price": 43.89,
       "currency": "USD",
       "image": {
@@ -189,7 +189,7 @@
     },
     {
       "name": "Penthouse",
-      "category": "food",
+      "category": "Food",
       "price": 53.89,
       "currency": "USD",
       "image": {
@@ -207,7 +207,7 @@
     },
     {
       "name": "Autumn Leafs",
-      "category": "pets",
+      "category": "Pets",
       "price": 10.29,
       "currency": "USD",
       "image": {
@@ -225,7 +225,7 @@
     },
     {
       "name": "Dog",
-      "category": "premium",
+      "category": "Premium",
       "price": 13.89,
       "currency": "USD",
       "image": {
@@ -243,7 +243,7 @@
     },
     {
       "name": "Girl Sky",
-      "category": "landmarks",
+      "category": "Landmarks",
       "price": 19,
       "currency": "USD",
       "image": {
@@ -261,7 +261,7 @@
     },
     {
       "name": "Pet Love",
-      "category": "premium",
+      "category": "Premium",
       "price": 78.9,
       "currency": "USD",
       "image": {
@@ -279,7 +279,7 @@
     },
     {
       "name": "Trees Nature",
-      "category": "pets",
+      "category": "Pets",
       "price": 159,
       "currency": "USD",
       "image": {
@@ -297,7 +297,7 @@
     },
     {
       "name": "Girl Cooking",
-      "category": "people",
+      "category": "People",
       "price": 19,
       "currency": "USD",
       "image": {
@@ -315,7 +315,7 @@
     },
     {
       "name": "Red Bench",
-      "category": "people",
+      "category": "People",
       "price": 35.9,
       "currency": "USD",
       "image": {
@@ -333,7 +333,7 @@
     },
     {
       "name": "Art",
-      "category": "nature",
+      "category": "Nature",
       "price": 15.23,
       "currency": "USD",
       "image": {
@@ -351,7 +351,7 @@
     },
     {
       "name": "Design",
-      "category": "cities",
+      "category": "Cities",
       "price": 389,
       "currency": "USD",
       "image": {
@@ -371,7 +371,7 @@
   "productCard": [
     {
       "name": "Cooking",
-      "category": "food",
+      "category": "Food",
       "price": 100,
       "currency": "USD",
       "image": {
@@ -390,7 +390,7 @@
     },
     {
       "name": "Samurai King Restling",
-      "category": "landmarks",
+      "category": "Landmarks",
       "price": 102,
       "currency": "USD",
       "image": {

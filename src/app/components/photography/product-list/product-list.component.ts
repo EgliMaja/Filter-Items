@@ -1,8 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { ProductListModel } from "../../../models/product-list.model";
 import { ProductListService } from "../../../services/product-list.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Subject, takeUntil } from "rxjs";
+import { CategoryFilterItemsService } from "../../../services/category-filter-items.service";
 
 @Component({
   selector: 'app-product-list',
@@ -10,10 +11,11 @@ import { Subject, takeUntil } from "rxjs";
   styleUrls: ['./product-list.component.scss']
 })
 
-export class ProductListComponent implements OnInit , OnDestroy{
+export class ProductListComponent implements OnInit , AfterViewInit , OnDestroy{
 
-  @Input() selectedOptionSorting:string = '';
+  @Input() selectedOptionSorting: string = '';
   productList: ProductListModel[] = [];
+  selectedOptionCategory: string[] = [];
   page: number = 1;
   productPerPage: number = 6;
   private destroy$: Subject<boolean> = new Subject<boolean>();
@@ -21,10 +23,15 @@ export class ProductListComponent implements OnInit , OnDestroy{
   constructor(
     private productService: ProductListService,
     private  _snackBar: MatSnackBar,
+    private categoriesService: CategoryFilterItemsService,
   ) { }
 
   ngOnInit(): void {
     this.getProducts();
+  }
+
+  ngAfterViewInit() {
+    this.getSelectedOptionToFilter();
   }
 
   ngOnDestroy() {
@@ -58,6 +65,21 @@ export class ProductListComponent implements OnInit , OnDestroy{
 
   openSnackBar(message: string, action: string) {
     this._snackBar.open(message, action);
+  }
+
+  getSelectedOptionToFilter(){
+    this.categoriesService.selectedCategories$.pipe(takeUntil(this.destroy$.asObservable())).subscribe(( categories: string[] )=> {
+      this.selectedOptionCategory = categories;
+      // this.filterByCategory();
+    })
+  }
+
+  filterByCategory(){
+    if ( !this.productList || !this.selectedOptionCategory || this.selectedOptionCategory.length === 0 ) {
+      return this.productList ;
+    }
+
+    return this.productList .filter(product => this.selectedOptionCategory.includes(product.category));
   }
 
 }

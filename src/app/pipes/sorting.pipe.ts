@@ -1,9 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {ProductListModel} from "../models/product-list.model";
+import { ProductListModel } from "../models/product-list.model";
 
 @Pipe({
     name: 'productSort'
 })
+
 export class ProductSortPipe implements PipeTransform {
     transform(products: ProductListModel[], sortBy: string): ProductListModel[] {
         if (!products) {
