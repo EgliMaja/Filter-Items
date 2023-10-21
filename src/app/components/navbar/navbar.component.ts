@@ -12,6 +12,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 export class NavbarComponent implements OnInit {
 
   productList!: ProductListModel[];
+  newProduct!: ProductListModel[];
 
   constructor(
       private productsService: ProductListService ,
@@ -20,6 +21,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSavedProducts();
+    this.getNewSavedProduct();
+
   }
 
   getSavedProducts(){
@@ -29,7 +32,7 @@ export class NavbarComponent implements OnInit {
       },
       error:(err) => {
         this.openSnackBar( JSON.stringify(err.status) , "Close");
-      }
+      },
     })
   }
 
@@ -48,6 +51,12 @@ export class NavbarComponent implements OnInit {
       complete:()=> {
         this.getSavedProducts();
       }
+    })
+  }
+
+  getNewSavedProduct(){
+    this.productsService.savedProductSubject$.subscribe((product: ProductListModel[])=> {
+      this.newProduct = product;
     })
   }
 

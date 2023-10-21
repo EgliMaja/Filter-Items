@@ -6,11 +6,12 @@ import { ProductListModel } from "../models/product-list.model";
 })
 
 export class FilterCategoryPipe implements PipeTransform {
-  transform(products: ProductListModel[], selectedCategories: string[]): ProductListModel[] {
+transform(products: ProductListModel[], selectedCategories: string[]): ProductListModel[] {
     if (!products || !selectedCategories || selectedCategories.length === 0) {
       return products;
     }
-    // console.log(filteredProducts , 'filtered')
-    return products.filter(product => selectedCategories.some(category => product.category.includes(category)));
+  const filteredProducts = products.filter(product =>selectedCategories.some(category => product.category.includes(category)));
+    console.log(filteredProducts , 'filtered')
+    return filteredProducts ;
   }
 }

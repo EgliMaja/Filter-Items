@@ -2,6 +2,7 @@
     <div *ngFor="let product of productList |
        productSort: selectedOptionSorting |
        filterCategory: selectedOptionCategory |
+       filterRangeOrder: selectedOptionOrderRange |
        paginate: {itemsPerPage : productPerPage , currentPage : page}" class="col-sm-4">
         <mat-card class="example-card mb-5">
             <img mat-card-image class="mat-img"

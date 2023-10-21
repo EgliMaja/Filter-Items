@@ -14,6 +14,7 @@ export class ProductListService {
   private readonly myProductApi: string;
   private savedProducts: ProductListModel[] = [];
   private savedProductSubject = new BehaviorSubject<ProductListModel[]>(this.savedProducts);
+  savedProductSubject$ = this.savedProductSubject.asObservable();
 
   constructor(
     private http: HttpClient
@@ -29,20 +30,21 @@ export class ProductListService {
 
   /* Add a product to card */
   saveProductToCard(product: Omit<ProductListModel , 'id'>): Observable<ProductListModel>{
-    this.savedProductSubject.next([...this.savedProducts]);
     return this.http.post<ProductListModel>(`${this.myProductApi}`,product);
   }
 
   /* Get Saved Product */
   getSavedProduct():Observable<ProductListModel[]>{
-    this.savedProductSubject.next([...this.savedProducts]);
     return  this.http.get<ProductListModel[]>(`${this.myProductApi}`);
   }
 
   /* Delete product */
   removeProduct(id: number): Observable<ProductListModel[]> {
-    this.savedProductSubject.next([...this.savedProducts]);
     return this.http.delete<ProductListModel[]>((this.myProductApi)+'/'+id);
   }
 
+  /* Send Saved Product to Card */
+  sendProductToCard(product: ProductListModel[]){
+    this.savedProductSubject.next(product);
+  }
 }

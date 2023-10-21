@@ -370,25 +370,6 @@
   ],
   "productCard": [
     {
-      "name": "Cooking",
-      "category": "Food",
-      "price": 100,
-      "currency": "USD",
-      "image": {
-        "src": "../../assets/images/pexels-photo-1153369.png",
-        "alt": ""
-      },
-      "bestseller": false,
-      "featured": false,
-      "details": {
-        "dimmentions": {
-          "width": 282,
-          "height": 335
-        }
-      },
-      "id": 1
-    },
-    {
       "name": "Samurai King Restling",
       "category": "Landmarks",
       "price": 102,
@@ -412,7 +393,7 @@
           }
         ]
       },
-      "id": 2
+      "id": 1
     }
   ]
 }

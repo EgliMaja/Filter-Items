@@ -1,10 +1,10 @@
 <div class="text-start mt-2">
   <p class="category">Category</p>
-  <form [formGroup]="formGroup">
+  <form [formGroup]="formGroup" >
     <section *ngFor="let category of categoriesOfProducts" class="example-section mt-4 mb-4">
       <mat-checkbox
-                    formControlName="category"
                     class="example-margin"
+                    formControlName="category"
                     (change)="onCheckboxChangeValue(category)"
       >
         {{ category }}

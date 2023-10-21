@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from "rxjs";
 import { ProductListService } from "../../../services/product-list.service";
 import { ProductListModel } from "../../../models/product-list.model";
@@ -11,7 +11,7 @@ import { CategoryFilterItemsService } from "../../../services/category-filter-it
   styleUrls: ['./filter-category.component.scss']
 })
 
-export class FilterCategoryComponent implements OnInit , OnDestroy {
+export class FilterCategoryComponent implements OnInit ,OnDestroy {
 
   @Input() selectedOptionCategory:string = '';
   private destroy$: Subject<boolean> = new Subject<boolean>();
@@ -24,12 +24,14 @@ export class FilterCategoryComponent implements OnInit , OnDestroy {
       private productService: ProductListService,
       private categoriesService: CategoryFilterItemsService,
       private formBuilder: FormBuilder,
+      private chd: ChangeDetectorRef,
   ) { }
 
   ngOnInit(): void {
     this.getProducts();
     this.categoriesForm();
   }
+
 
   ngOnDestroy() {
     this.destroy$.next(true);
@@ -49,17 +51,18 @@ export class FilterCategoryComponent implements OnInit , OnDestroy {
 
   categoriesForm(){
     this.formGroup = this.formBuilder.group({
-      category: [''] as any
+      category: ['']
     })
   }
 
-  onCheckboxChangeValue(category: string){
+  onCheckboxChangeValue( category: string){
     if (this.selectedCategories.includes(category)) {
       this.selectedCategories = this.selectedCategories.filter(item =>   item !== category);
     } else {
       this.selectedCategories.push(category);
     }
-    // console.log(this.selectedCategories , '...data')
+    console.log(this.selectedCategories , '...data')
+    this.chd.detectChanges();
     this.categoriesService.selectCategories(this.selectedCategories);
   }
 

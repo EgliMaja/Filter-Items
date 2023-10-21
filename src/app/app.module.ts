@@ -25,6 +25,7 @@ import { MatListModule } from "@angular/material/list";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductSortPipe } from "./pipes/sorting.pipe";
 import { FilterCategoryPipe} from "./pipes/filter-category.pipe";
+import { FilterRangeOrderPipe } from "./pipes/filter-range-order.pipe";
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FilterCategoryPipe} from "./pipes/filter-category.pipe";
     MainContentComponent,
     ProductSortPipe,
     FilterCategoryPipe,
+    FilterRangeOrderPipe,
   ],
   imports: [
     BrowserModule,

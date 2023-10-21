@@ -5,7 +5,7 @@
                 <img src="../../assets/images/Group.jpg" class="group-img">
             </button>
             <div  class="product-length">
-                <p class="total-number">{{productList?.length}}</p>
+                <p class="total-number">{{ (productList?.length || 0) + (newProduct?.length || 0) }}</p>
             </div>
         </div>
     </div>

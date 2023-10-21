@@ -12,6 +12,7 @@ export class MainContentComponent implements OnInit {
 
   productList!: ProductListModel[];
   featuredProduct!:boolean;
+  savedProduct!: ProductListModel;
 
   constructor(
     private productService: ProductListService,
@@ -38,11 +39,15 @@ export class MainContentComponent implements OnInit {
   saveProductToCard(product: ProductListModel){
     this.productService.saveProductToCard(product).subscribe({
       next:(res)=>{
+        this.savedProduct = res;
         this.openSnackBar( JSON.stringify(res) , "Close");
       },
       error:(err) =>{
         this.openSnackBar( JSON.stringify(err.status) , "Close");
       },
+      complete:()=> {
+        this.productService.sendProductToCard(Array(this.savedProduct));
+      }
 
     })
   }
