@@ -18,14 +18,22 @@
     opacity: 1;
     max-width: 100%;
     bottom: 0;
+    height: 104px;
+    overflow: hidden;
+    width: 450px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
   }
   .sidebar-filters{
-    overflow: initial;
-    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
     padding: 0;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
+    width: 395px;
   }
   .clear-btn{
     width: 120px;

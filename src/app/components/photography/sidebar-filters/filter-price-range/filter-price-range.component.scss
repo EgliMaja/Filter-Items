@@ -2,3 +2,16 @@
   font-weight: 700;
   font-size: 22px;
 }
+
+@media (max-width: 600px) {
+  .checkbox{
+    height: 37px;
+    width: 37px;
+    border: 4px;
+    position: relative;
+  }
+  .range-option{
+    font-size: 28px;
+    position: relative;
+  }
+}

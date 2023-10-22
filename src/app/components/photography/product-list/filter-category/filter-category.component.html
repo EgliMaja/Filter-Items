@@ -2,21 +2,20 @@
     <div class="row mt-0">
         <div class="col text-start">
             <p class="category">Category</p>
-            <p class="category hiddenParagraph">Filter</p>
         </div>
-        <div class="col text-end mb-0 mt-4">
+        <div class="col text-end mb-0 ">
             <img src="../../assets/images/close-icon.png" (click)="closeDialog()" class="close-icon">
         </div>
     </div>
     <form [formGroup]="formGroup">
-        <section *ngFor="let category of categoriesOfProducts" class="example-section mt-4 mb-4">
-            <mat-checkbox
-                    class="example-margin"
+        <section *ngFor="let category of categoriesOfProducts" class="d-flex mt-4 mb-4">
+            <input
+                    class="checkbox"
+                    type="checkbox"
                     formControlName="category"
                     (change)="onCheckboxChangeValue(category)"
             >
-                {{ category }}
-            </mat-checkbox>
+            <div class="category-option px-2 mt-2">{{ category }}</div>
         </section>
     </form>
     <div class="mt-5">

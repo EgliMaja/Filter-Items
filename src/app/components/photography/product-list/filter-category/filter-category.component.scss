@@ -3,10 +3,6 @@
   font-weight: 700;
 }
 
-.hiddenParagraph {
-  visibility: hidden;
-}
-
 .close-icon {
   visibility: hidden;
 }
@@ -18,17 +14,22 @@
 }
 
 @media (max-width: 600px) {
-  .category {
-    visibility: hidden;
-  }
-  .hiddenParagraph {
-    visibility: visible;
-  }
   .close-icon {
     visibility: visible;
     height: 18px;
     width: 18px;
     cursor: pointer;
+    position: relative;
+    margin-right: 50px;
   }
+  .category-option{
+    font-size: 28px;
+  }
+  .checkbox{
+    height: 37px;
+    width: 37px;
+    border: 4px;
+  }
+
 }
 

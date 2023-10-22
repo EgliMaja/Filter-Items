@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import {CategoryFilterItemsService} from "../../../services/category-filter-items.service";
 
@@ -16,7 +16,10 @@ export class SidebarFiltersComponent implements OnInit {
   constructor(
       private  categoryFilterService: CategoryFilterItemsService,
       public dialog: MatDialog,
-      ) { }
+      private formBuilder: FormBuilder,
+      ) {
+    this.formGroup = formBuilder.group({});
+  }
 
   ngOnInit(): void {
   }
