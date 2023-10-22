@@ -25,17 +25,24 @@ select{
     font-size: 18px;
     display: flex;
     justify-content: start;
+    width: 290px;
   }
   .sorting-price{
     visibility: hidden;
   }
   .filter{
+    margin-left: -50px;
     cursor: pointer;
     visibility: visible;
-    width: 29px;
-    height: 29px;
+    width: 39px;
+    height: 39px;
   }
   .filter-checkobxes{
     visibility: hidden;
+  }
+  .product-list-component{
+    width: 100%;
+    margin-top: -750px;
+    margin-left: 119px;
   }
 }

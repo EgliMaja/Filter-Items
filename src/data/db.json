@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Red Bench",
-      "category": "People",
+      "category": "Nature",
       "price": 3.89,
       "currency": "USD",
       "image": {
@@ -20,11 +20,11 @@
     },
     {
       "name": "Girl",
-      "category": "Food",
+      "category": "Premium",
       "price": 93.89,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-596893.jpeg",
+        "src": "../../assets/images/pexels-photo-57690.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -37,12 +37,12 @@
       }
     },
     {
-      "name": "Animal",
+      "name": "Room",
       "category": "Premium",
       "price": 3.89,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-678444.png",
+        "src": "../../assets/images/pexels-photo-3933020.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -55,12 +55,12 @@
       }
     },
     {
-      "name": "Cooking",
-      "category": "Food",
+      "name": "Photography",
+      "category": "Nature",
       "price": 100,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-1153369.png",
+        "src": "../../assets/images/pexels-photo-1577026.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -78,7 +78,7 @@
       "price": 189,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-3070989.jpeg",
+        "src": "../../assets/images/pexels-photo-2857583.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -96,7 +96,7 @@
       "price": 102,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/group2.jpg",
+        "src": "../../assets/images/free-photo-of-woman-in-red-dress-standing-near-horses-on-field.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -117,11 +117,11 @@
     },
     {
       "name": "Leaf",
-      "category": "Cities",
+      "category": "Premium",
       "price": 113.89,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-3150553.jpeg",
+        "src": "../../assets/images/pexels-photo-4210314.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -153,7 +153,7 @@
     },
     {
       "name": "Ferry",
-      "category": "Nature",
+      "category": "Cities",
       "price": 83.89,
       "currency": "USD",
       "image": {
@@ -171,7 +171,7 @@
     },
     {
       "name": "Flower",
-      "category": "People",
+      "category": "Premium",
       "price": 43.89,
       "currency": "USD",
       "image": {
@@ -189,7 +189,7 @@
     },
     {
       "name": "Penthouse",
-      "category": "Food",
+      "category": "Premium",
       "price": 53.89,
       "currency": "USD",
       "image": {
@@ -207,7 +207,7 @@
     },
     {
       "name": "Autumn Leafs",
-      "category": "Pets",
+      "category": "Nature",
       "price": 10.29,
       "currency": "USD",
       "image": {
@@ -225,7 +225,7 @@
     },
     {
       "name": "Dog",
-      "category": "Premium",
+      "category": "Pets",
       "price": 13.89,
       "currency": "USD",
       "image": {
@@ -260,12 +260,12 @@
       }
     },
     {
-      "name": "Pet Love",
+      "name": "Living Room",
       "category": "Premium",
       "price": 78.9,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-678444.png",
+        "src": "../../assets/images/pexels-photo-5929944.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -279,7 +279,7 @@
     },
     {
       "name": "Trees Nature",
-      "category": "Pets",
+      "category": "Nature",
       "price": 159,
       "currency": "USD",
       "image": {
@@ -296,12 +296,12 @@
       }
     },
     {
-      "name": "Girl Cooking",
-      "category": "People",
+      "name": "Cooking Color",
+      "category": "Food",
       "price": 19,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-1153369.png",
+        "src": "../../assets/images/pexels-photo-6432355.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -314,12 +314,12 @@
       }
     },
     {
-      "name": "Red Bench",
+      "name": "Horsing",
       "category": "People",
       "price": 35.9,
       "currency": "USD",
       "image": {
-        "src": "../../assets/images/pexels-photo-3150553.jpeg",
+        "src": "../../assets/images/pexels-photo-4344325.jpeg",
         "alt": ""
       },
       "bestseller": false,
@@ -333,7 +333,7 @@
     },
     {
       "name": "Art",
-      "category": "Nature",
+      "category": "Cities",
       "price": 15.23,
       "currency": "USD",
       "image": {
@@ -394,6 +394,25 @@
         ]
       },
       "id": 1
+    },
+    {
+      "name": "Girl",
+      "category": "Premium",
+      "price": 93.89,
+      "currency": "USD",
+      "image": {
+        "src": "../../assets/images/pexels-photo-57690.jpeg",
+        "alt": ""
+      },
+      "bestseller": false,
+      "featured": false,
+      "details": {
+        "dimmentions": {
+          "width": 282,
+          "height": 335
+        }
+      },
+      "id": 2
     }
   ]
 }

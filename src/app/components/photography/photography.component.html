@@ -1,8 +1,8 @@
 <div class="container">
   <hr>
   <div class="row mt-5">
-    <div class="col text-start phptography-sector-title">
-      <p>Photography / <span class="text-secondary"> Premium Photos</span></p>
+    <div class="col text-start ">
+      <p class="phptography-sector-title">Photography / <span class="text-secondary"> Premium Photos</span></p>
     </div>
     <div class="col sorting-price d-flex justify-content-end">
       <img src="../../assets/images/sort.png">
@@ -30,7 +30,7 @@
         <app-filter-price-range></app-filter-price-range>
       </div>
     </div>
-    <div class="col-9">
+    <div class="col-9 product-list-component">
       <app-product-list [selectedOptionSorting]="selectForm.get('selectSortingOption')?.value"></app-product-list>
     </div>
   </div>

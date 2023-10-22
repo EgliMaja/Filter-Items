@@ -57,7 +57,7 @@ export class FilterCategoryComponent implements OnInit ,OnDestroy {
 
   onCheckboxChangeValue( category: string){
     if (this.selectedCategories.includes(category)) {
-      this.selectedCategories = this.selectedCategories.filter(item =>   item !== category);
+      this.selectedCategories = this.selectedCategories.filter(item =>   item !== category && item !== category);
     } else {
       this.selectedCategories.push(category);
     }

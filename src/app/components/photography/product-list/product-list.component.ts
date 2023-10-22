@@ -79,13 +79,13 @@ export class ProductListComponent implements OnInit , AfterViewInit , OnDestroy{
 
   getSelectedOptionToFilter(){
     this.categoriesService.selectedCategories$.pipe(takeUntil(this.destroy$.asObservable())).subscribe(( categories: string[])=> {
-      this.selectedOptionCategory = categories;
+      this.selectedOptionCategory = [...categories];
     })
   }
 
   getSelectedRangeToFilter(){
     this.priceRangeService.selectedRange$.pipe(takeUntil(this.destroy$.asObservable())).subscribe((ranges: string[]) => {
-      this.selectedOptionOrderRange = ranges;
+      this.selectedOptionOrderRange = [...ranges];
     })
   }
 

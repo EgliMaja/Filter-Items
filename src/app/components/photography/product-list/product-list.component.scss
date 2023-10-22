@@ -58,19 +58,32 @@
 
 @media (max-width: 600px) {
  .example-card{
-   width: 800px !important;
-   height: 661.05px;
-   margin-left: -90px;
+   max-width: 430px !important;
+   height: 500px;
+   margin-left: -100px;
+   border: none;
  }
   .mat-img{
     width: 400px;
   }
   .mat-btn{
-    bottom: 51px;
-    width: 100%;
+    bottom: 137px;
+    width: 400px;
   }
   .img-price{
     font-size: 31.55px;
+  }
+  .text-overlay-img{
+    bottom: 435px;
+  }
+  .about-product{
+    margin-top: -10px;
+  }
+  .pagination{
+    margin-left: -250px;
+  }
+  img{
+    background-size: cover;
   }
 }
 
