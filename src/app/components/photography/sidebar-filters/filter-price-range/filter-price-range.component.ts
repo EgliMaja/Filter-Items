@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PriceRangeFilterItemsService } from "../../../services/priceRange-filter-items.service";
-import { PriceRangeFilterModel } from "../../../models/price-range-filter.model";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import { PriceRangeFilterItemsService } from "../../../../services/priceRange-filter-items.service";
+import { PriceRangeFilterModel } from "../../../../models/price-range-filter.model";
+import { FormBuilder, FormGroup } from "@angular/forms";
+import { CategoryFilterItemsService } from "../../../../services/category-filter-items.service";
 
 @Component({
   selector: 'app-filter-price-range',
@@ -17,6 +18,7 @@ export class FilterPriceRangeComponent implements OnInit {
 
   constructor(
     private service: PriceRangeFilterItemsService,
+    private categoriesService: CategoryFilterItemsService,
     private formBuilder: FormBuilder,
   ) { }
 
@@ -37,6 +39,11 @@ export class FilterPriceRangeComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       range: ['']
     })
+    this.categoriesService.resetForm$.subscribe((shouldReset) => {
+      if (shouldReset) {
+        this.resetForm();
+      }
+    });
   }
 
   onChecboxValueChange(range: string){
@@ -46,6 +53,12 @@ export class FilterPriceRangeComponent implements OnInit {
       this.selectedRanges.push(range)
     }
     this.service.selectRange(this.selectedRanges);
+  }
+
+  resetForm(){
+    this.formGroup.patchValue({
+      range: false
+    })
   }
 
 }

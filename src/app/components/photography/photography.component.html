@@ -24,11 +24,8 @@
   </div>
 
   <div class="row mt-5">
-    <div class="col-3 filter-checkobxes">
-      <app-filter-category ></app-filter-category>
-      <div class="mt-5">
-        <app-filter-price-range></app-filter-price-range>
-      </div>
+    <div class="col-3 filter-checkboxes">
+      <app-sidebar-filters></app-sidebar-filters>
     </div>
     <div class="col-9 product-list-component">
       <app-product-list [selectedOptionSorting]="selectForm.get('selectSortingOption')?.value"></app-product-list>

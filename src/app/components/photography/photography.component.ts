@@ -1,8 +1,8 @@
-import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { MatDialog } from "@angular/material/dialog";
-import { FilterCategoryComponent } from "./filter-category/filter-category.component";
-import {CategoryFilterItemsService} from "../../services/category-filter-items.service";
+import { FilterCategoryComponent } from "./product-list/filter-category/filter-category.component";
+import { CategoryFilterItemsService } from "../../services/category-filter-items.service";
+import {SidebarFiltersComponent} from "./sidebar-filters/sidebar-filters.component";
 
 @Component({
   selector: 'app-photography',
@@ -16,7 +16,6 @@ export class PhotographyComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private dialog: MatDialog,
     private categoryFilterService: CategoryFilterItemsService,
   ) { }
 
@@ -31,7 +30,7 @@ export class PhotographyComponent implements OnInit {
   }
 
   openFilterComponents(){
-    this.categoryFilterService.openDialog(FilterCategoryComponent)
+    this.categoryFilterService.openDialog(SidebarFiltersComponent);
   }
 
 

@@ -1,0 +1,38 @@
+.filter-buttons{
+  opacity: 0;
+}
+.clear-btn{
+  background-color: white;
+  width: 70%;
+}
+.save-btn{
+  color: white;
+  background-color: black;
+  margin-left: 20px;
+  width: 70%;
+}
+
+@media (max-width: 600px) {
+  .filter-buttons{
+    position: relative;
+    opacity: 1;
+    max-width: 100%;
+    bottom: 0;
+  }
+  .sidebar-filters{
+    overflow: initial;
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .clear-btn{
+    width: 120px;
+    margin-bottom: 30px;
+  }
+  .save-btn{
+    width: 120px;
+    margin-bottom: 30px;
+  }
+}

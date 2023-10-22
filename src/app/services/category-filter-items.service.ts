@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import { MatDialog } from "@angular/material/dialog";
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,8 @@ export class CategoryFilterItemsService {
 
   protected selectedCategories = new BehaviorSubject<string[]>([]);
   selectedCategories$ = this.selectedCategories.asObservable();
+  private resetFormSubject = new BehaviorSubject<boolean>(false);
+  resetForm$ = this.resetFormSubject.asObservable();
 
   constructor(private dialog: MatDialog ) { }
 
@@ -21,8 +23,8 @@ export class CategoryFilterItemsService {
     return this.dialog.open(component);
   }
 
-  closeDialog() {
-    return this.dialog.afterAllClosed;
+  triggerFormReset() {
+    this.resetFormSubject.next(true);
   }
 
 }

@@ -370,25 +370,6 @@
   ],
   "productCard": [
     {
-      "name": "Design",
-      "category": "Cities",
-      "price": 389,
-      "currency": "USD",
-      "image": {
-        "src": "../../assets/images/pexels-photo-18587778.png",
-        "alt": ""
-      },
-      "bestseller": false,
-      "featured": false,
-      "details": {
-        "dimmentions": {
-          "width": 282,
-          "height": 335
-        }
-      },
-      "id": 4
-    },
-    {
       "name": "Photography",
       "category": "Nature",
       "price": 100,

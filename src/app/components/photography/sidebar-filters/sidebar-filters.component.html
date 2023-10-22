@@ -1,0 +1,17 @@
+<div class="sidebar-filters">
+    <app-filter-category [formGroup]="formGroup"></app-filter-category>
+    <div class="mt-5">
+        <app-filter-price-range></app-filter-price-range>
+    </div>
+    <div class="row filter-buttons">
+        <hr>
+        <div class="col text-start">
+            <button mat-raised-button class="mat-btn clear-btn"
+                    (click)="clearCheckedValues()">{{"clear" | uppercase}}</button>
+        </div>
+        <div class="col text-end">
+            <button mat-raised-button class="mat-btn md-dialog-close save-btn"
+                    (click)="closeDialog();">{{"save" | uppercase}}</button>
+        </div>
+    </div>
+</div>

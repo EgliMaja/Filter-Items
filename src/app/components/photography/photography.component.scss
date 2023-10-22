@@ -39,11 +39,10 @@ select{
     width: 39px;
     height: 39px;
   }
-  .filter-checkobxes{
+  .filter-checkboxes{
     visibility: hidden;
-  }
-  .filter-buttons{
-    visibility: visible;
+    max-width: 100%;
+    margin-top: 80px;
   }
   .product-list-component{
     display: flex;

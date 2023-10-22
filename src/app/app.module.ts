@@ -8,8 +8,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { PhotographyDetailsComponent} from "./components/photography-details/photography-details.component";
 import { PhotographyComponent} from "./components/photography/photography.component";
 import { ProductListComponent} from "./components/photography/product-list/product-list.component";
-import { FilterCategoryComponent} from "./components/photography/filter-category/filter-category.component";
-import { FilterPriceRangeComponent} from "./components/photography/filter-price-range/filter-price-range.component";
+import { FilterCategoryComponent} from "./components/photography/product-list/filter-category/filter-category.component";
+import { FilterPriceRangeComponent} from "./components/photography/sidebar-filters/filter-price-range/filter-price-range.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatCardModule } from "@angular/material/card";
@@ -26,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductSortPipe } from "./pipes/sorting.pipe";
 import { FilterCategoryPipe} from "./pipes/filter-category.pipe";
 import { FilterRangeOrderPipe } from "./pipes/filter-range-order.pipe";
-import {CommonModule} from "@angular/common";
+import { CommonModule } from "@angular/common";
+import { SidebarFiltersComponent } from './components/photography/sidebar-filters/sidebar-filters.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {CommonModule} from "@angular/common";
     ProductSortPipe,
     FilterCategoryPipe,
     FilterRangeOrderPipe,
+    SidebarFiltersComponent,
   ],
   imports: [
     BrowserModule,
