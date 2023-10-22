@@ -2,6 +2,7 @@
   width: 54px;
   height: 54px;
   cursor: pointer;
+  position: relative;
 }
 
 hr{
@@ -11,6 +12,7 @@ hr{
   border: 4px solid #dfdede;
   margin-top: -53px;
   overflow: unset;
+  position: relative;
 }
 
 .title-image{
@@ -46,6 +48,7 @@ hr{
   height: 100%;
   margin-top: 17px;
   border: 3px solid #F8F8F8;
+  position: relative;
 }
 .product-length{
   width: 21px;
@@ -53,7 +56,7 @@ hr{
   background-color: black;
   display: flex;
   justify-content: center;
-  margin-left: 1270px;
+  margin-top: 35px;
 }
 .total-number{
   font-weight: 700;
@@ -68,7 +71,5 @@ hr{
     width: 32px;
     height: 32px;
   }
-  .product-length{
-    margin-left: 436px;
-  }
+
 }

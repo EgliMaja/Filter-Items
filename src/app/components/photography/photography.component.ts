@@ -1,5 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
+import { MatDialog } from "@angular/material/dialog";
+import { FilterCategoryComponent } from "./filter-category/filter-category.component";
+import {CategoryFilterItemsService} from "../../services/category-filter-items.service";
 
 @Component({
   selector: 'app-photography',
@@ -9,26 +12,26 @@ import { FormBuilder, FormGroup } from "@angular/forms";
 
 export class PhotographyComponent implements OnInit {
 
-  @Output() selectedOption: EventEmitter<string> = new EventEmitter<string>();
-  selectedOptionCategory: string = '';
-  @Input() set selectedCategoryOption(value:string){
-    this.selectedOptionCategory = value;
-  }
   selectForm!: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private dialog: MatDialog,
+    private categoryFilterService: CategoryFilterItemsService,
   ) { }
 
   ngOnInit(): void {
     this.filterForm();
-    this.selectedOption.emit(this.selectedOptionCategory);
   }
 
   filterForm(){
     this.selectForm = this.formBuilder.group({
       selectSortingOption: [''],
     })
+  }
+
+  openFilterComponents(){
+    this.categoryFilterService.openDialog(FilterCategoryComponent)
   }
 
 

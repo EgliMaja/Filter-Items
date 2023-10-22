@@ -1,19 +1,19 @@
-import { ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import { Subject, takeUntil } from "rxjs";
 import { ProductListService } from "../../../services/product-list.service";
 import { ProductListModel } from "../../../models/product-list.model";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { CategoryFilterItemsService } from "../../../services/category-filter-items.service";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-filter-category',
   templateUrl: './filter-category.component.html',
-  styleUrls: ['./filter-category.component.scss']
+  styleUrls: ['./filter-category.component.scss'],
 })
 
 export class FilterCategoryComponent implements OnInit ,OnDestroy {
 
-  @Input() selectedOptionCategory:string = '';
   private destroy$: Subject<boolean> = new Subject<boolean>();
   productList: ProductListModel[] = [];
   categoriesOfProducts: string[] = [];
@@ -25,6 +25,7 @@ export class FilterCategoryComponent implements OnInit ,OnDestroy {
       private categoriesService: CategoryFilterItemsService,
       private formBuilder: FormBuilder,
       private chd: ChangeDetectorRef,
+      public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -55,6 +56,7 @@ export class FilterCategoryComponent implements OnInit ,OnDestroy {
     })
   }
 
+
   onCheckboxChangeValue( category: string){
     if (this.selectedCategories.includes(category)) {
       this.selectedCategories = this.selectedCategories.filter(item =>   item !== category && item !== category);
@@ -63,7 +65,22 @@ export class FilterCategoryComponent implements OnInit ,OnDestroy {
     }
     console.log(this.selectedCategories , '...data')
     this.chd.detectChanges();
+
+    this.formGroup.patchValue(this.selectedCategories);
     this.categoriesService.selectCategories(this.selectedCategories);
+
   }
+
+  clearCheckedValues(){
+    this.formGroup.patchValue({
+      category: false
+    })
+  }
+
+
+  closeDialog(){
+    this.dialog.closeAll();
+  }
+
 
 }

@@ -1,16 +1,26 @@
 <div class="text-start mt-2">
   <p class="category">Category</p>
-  <form [formGroup]="formGroup" >
+  <form [formGroup]="formGroup">
     <section *ngFor="let category of categoriesOfProducts" class="example-section mt-4 mb-4">
       <mat-checkbox
-                    class="example-margin"
-                    formControlName="category"
-                    (change)="onCheckboxChangeValue(category)"
+        class="example-margin"
+        formControlName="category"
+        (change)="onCheckboxChangeValue(category)"
       >
         {{ category }}
       </mat-checkbox>
     </section>
+    <hr>
+    <div class="px-3 m-4 filter-buttons d-flex justify-content-center mt-3">
+      <div class="col">
+        <button mat-raised-button class="mat-btn clear-btn" (click)="clearCheckedValues()">{{"clear" | uppercase}}</button>
+      </div>
+      <div class="col">
+        <button mat-raised-button class="mat-btn md-dialog-close save-btn"  (click)="onCheckboxChangeValue(formGroup.value);closeDialog();">{{"save" | uppercase}}</button>
+      </div>
+    </div>
   </form>
+
   <div class="mt-5">
     <hr>
   </div>

@@ -20,6 +20,8 @@ img{
 select{
   border: none;
 }
+
+
 @media (max-width: 600px) {
   .phptography-sector-title{
     font-size: 18px;
@@ -40,9 +42,12 @@ select{
   .filter-checkobxes{
     visibility: hidden;
   }
+  .filter-buttons{
+    visibility: visible;
+  }
   .product-list-component{
-    width: 100%;
-    margin-top: -750px;
-    margin-left: 119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

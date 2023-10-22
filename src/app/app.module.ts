@@ -26,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ProductSortPipe } from "./pipes/sorting.pipe";
 import { FilterCategoryPipe} from "./pipes/filter-category.pipe";
 import { FilterRangeOrderPipe } from "./pipes/filter-range-order.pipe";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { FilterRangeOrderPipe } from "./pipes/filter-range-order.pipe";
     BrowserAnimationsModule,
     HttpClientModule,
     ObserversModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,

@@ -18,14 +18,14 @@
         </span>
       </div>
       <div class="filter">
-        <img src="../../assets/images/filter.png">
+       <img src="../../assets/images/filter.png" (click)="openFilterComponents()">
       </div>
     </div>
   </div>
 
   <div class="row mt-5">
     <div class="col-3 filter-checkobxes">
-      <app-filter-category [selectedOptionCategory]="selectedOptionCategory"></app-filter-category>
+      <app-filter-category ></app-filter-category>
       <div class="mt-5">
         <app-filter-price-range></app-filter-price-range>
       </div>
