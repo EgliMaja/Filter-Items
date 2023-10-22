@@ -4,7 +4,7 @@
             <button mat-button [matMenuTriggerFor]="menu">
                 <img src="../../assets/images/Group.jpg" class="group-img">
             </button>
-            <div  class="product-length">
+            <div class="product-length">
                 <p class="total-number">{{ (productList?.length || 0) + (newProduct?.length || 0) }}</p>
             </div>
         </div>
@@ -13,13 +13,13 @@
 </div>
 
 <div class="d-flex justify-content-end">
-    <mat-menu #menu class="mat-menu">
-        <div class="row text-end">
-          <div class="col">
-            <button mat-button>
-                <img src="../../assets/images/close-icon.png" class="close-icon">
-            </button>
-          </div>
+    <mat-menu #menu id="mat-menu">
+        <div class="row d-flex justify-content-end">
+            <div class="col">
+                <button mat-button>
+                    <img src="../../assets/images/close-icon.png" class="close-icon">
+                </button>
+            </div>
         </div>
         <div *ngFor="let savedItem of productList " class="row mb-3 m-3">
             <div class="col-7">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { FilterCategoryComponent } from "./product-list/filter-category/filter-category.component";
+import { FilterCategoryComponent } from "./sidebar-filters/filter-category/filter-category.component";
 import { CategoryFilterItemsService } from "../../services/category-filter-items.service";
 import {SidebarFiltersComponent} from "./sidebar-filters/sidebar-filters.component";
 

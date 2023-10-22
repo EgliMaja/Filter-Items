@@ -8,7 +8,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { PhotographyDetailsComponent} from "./components/photography-details/photography-details.component";
 import { PhotographyComponent} from "./components/photography/photography.component";
 import { ProductListComponent} from "./components/photography/product-list/product-list.component";
-import { FilterCategoryComponent} from "./components/photography/product-list/filter-category/filter-category.component";
+import { FilterCategoryComponent} from "./components/photography/sidebar-filters/filter-category/filter-category.component";
 import { FilterPriceRangeComponent} from "./components/photography/sidebar-filters/filter-price-range/filter-price-range.component";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCheckboxModule } from "@angular/material/checkbox";

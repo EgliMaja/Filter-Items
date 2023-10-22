@@ -1,16 +1,16 @@
 <div *ngFor="let item of productList" class="container mt-5">
-  <div *ngIf="item.featured" class="row">
-    <div class="col text-start">
-      <p class="title">{{item.name | titlecase}}</p>
+    <div *ngIf="item.featured" class="row">
+        <div class="col text-start">
+            <p class="title">{{item.name | titlecase}}</p>
+        </div>
+        <div class="col text-end">
+            <button mat-raised-button class="button" (click)="saveProductToCard(item)">{{"add to cart" | uppercase}}</button>
+        </div>
     </div>
-    <div class="col text-end">
-      <button mat-raised-button class="button" (click)="saveProductToCard(item)">{{"add to cart" | uppercase}}</button>
+    <div *ngIf="item.featured" class="row mt-5 image-content">
+        <img [src]="item.image.src" class="photoOfTheDay">
     </div>
-  </div>
-  <div *ngIf="item.featured" class="row mt-5 image-content">
-    <img [src]="item.image.src" class="photoOfTheDay">
-  </div>
-  <div class="overlay-text">
-    <p class="text-overlay-img">{{"Photo of the day"}}
-  </div>
+    <div class="overlay-text">
+        <p class="text-overlay-img">{{"Photo of the day"}}
+    </div>
 </div>

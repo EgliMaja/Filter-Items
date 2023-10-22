@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, of} from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { DataCheckboxes} from "../models/price-range-filter.model";
 import * as itemCheckboxes from '../../data/filter-rangePrice-items.json';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class PriceRangeFilterItemsService {
 
   importMenuData = JSON.stringify(itemCheckboxes);

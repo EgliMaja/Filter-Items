@@ -4,60 +4,61 @@ import { ProductListModel } from "../../models/product-list.model";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl:'./navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
 })
 
 export class NavbarComponent implements OnInit {
 
-  productList!: ProductListModel[];
-  newProduct!: ProductListModel[];
+    productList!: ProductListModel[];
+    newProduct!: ProductListModel[];
 
-  constructor(
-      private productsService: ProductListService ,
-      private  _snackBar: MatSnackBar,
-  ) { }
+    constructor(
+        private productsService: ProductListService,
+        private _snackBar: MatSnackBar,
+    ) {
+    }
 
-  ngOnInit(): void {
-    this.getSavedProducts();
-    this.getNewSavedProduct();
-
-  }
-
-  getSavedProducts(){
-    this.productsService.getSavedProduct().subscribe({
-      next:(res)=> {
-        this.productList = res;
-      },
-      error:(err) => {
-        this.openSnackBar( JSON.stringify(err.status) , "Close");
-      },
-    })
-  }
-
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
-  }
-
-  removeProduct(){
-    this.productsService.removeProduct(this.productList[0].id as number).subscribe({
-      next:(res)=> {
-        this.openSnackBar( JSON.stringify(res) , "Close");
-      },
-      error:(err) => {
-        this.openSnackBar( JSON.stringify(err.status) , "Close");
-      },
-      complete:()=> {
+    ngOnInit(): void {
         this.getSavedProducts();
-      }
-    })
-  }
+        this.getNewSavedProduct();
 
-  getNewSavedProduct(){
-    this.productsService.savedProductSubject$.subscribe((product: ProductListModel[])=> {
-      this.newProduct = product;
-    })
-  }
+    }
+
+    getSavedProducts() {
+        this.productsService.getSavedProduct().subscribe({
+            next: (res) => {
+                this.productList = res;
+            },
+            error: (err) => {
+                this.openSnackBar(JSON.stringify(err.status), "Close");
+            },
+        })
+    }
+
+    openSnackBar(message: string, action: string) {
+        this._snackBar.open(message, action);
+    }
+
+    removeProduct() {
+        this.productsService.removeProduct(this.productList[0].id as number).subscribe({
+            next: (res) => {
+                this.openSnackBar(JSON.stringify(res), "Close");
+            },
+            error: (err) => {
+                this.openSnackBar(JSON.stringify(err.status), "Close");
+            },
+            complete: () => {
+                this.getSavedProducts();
+            }
+        })
+    }
+
+    getNewSavedProduct() {
+        this.productsService.savedProductSubject$.subscribe((product: ProductListModel[]) => {
+            this.newProduct = product;
+        })
+    }
 
 }

@@ -1,17 +1,24 @@
-.price-range{
+.price-range {
   font-weight: 700;
   font-size: 22px;
 }
 
+.checkbox {
+  width: 23px;
+  height: 23px;
+  border: 2px solid black;
+}
+
 @media (max-width: 600px) {
-  .checkbox{
+  .checkbox {
     height: 37px;
     width: 37px;
     border: 4px;
     position: relative;
   }
-  .range-option{
+  .range-option {
     font-size: 28px;
     position: relative;
+    margin-top: 10px;
   }
 }

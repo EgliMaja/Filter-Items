@@ -1,11 +1,13 @@
-.filter-buttons{
+.filter-buttons {
   opacity: 0;
 }
-.clear-btn{
+
+.clear-btn {
   background-color: white;
   width: 70%;
 }
-.save-btn{
+
+.save-btn {
   color: white;
   background-color: black;
   margin-left: 20px;
@@ -13,7 +15,7 @@
 }
 
 @media (max-width: 600px) {
-  .filter-buttons{
+  .filter-buttons {
     position: relative;
     opacity: 1;
     max-width: 100%;
@@ -25,7 +27,7 @@
     overflow-x: hidden;
     white-space: nowrap;
   }
-  .sidebar-filters{
+  .sidebar-filters {
     overflow-y: auto;
     overflow-x: hidden;
     white-space: nowrap;
@@ -35,11 +37,11 @@
     flex-direction: column;
     width: 395px;
   }
-  .clear-btn{
+  .clear-btn {
     width: 120px;
     margin-bottom: 30px;
   }
-  .save-btn{
+  .save-btn {
     width: 120px;
     margin-bottom: 30px;
   }

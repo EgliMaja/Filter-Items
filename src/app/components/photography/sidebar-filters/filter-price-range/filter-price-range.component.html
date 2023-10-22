@@ -1,11 +1,12 @@
-<form [formGroup]="formGroup" class="text-start mt-2" >
-  <p class="price-range ">Price range</p>
-  <section *ngFor="let range of priceRanges" class="d-flex  mt-4 mb-4 ">
-    <input
-            type="checkbox"
-            class="checkbox"
-            name="range"
-            formControlName="range"
-            (change)="onChecboxValueChange(range.title)"> <div class="range-option px-2 mt-2">{{range.title}}</div>
-  </section>
+<form [formGroup]="formGroup" class="text-start mt-2">
+    <p class="price-range ">Price range</p>
+    <section *ngFor="let range of priceRanges" class="d-flex  mt-4 mb-4 ">
+        <input
+                type="checkbox"
+                class="checkbox"
+                name="range"
+                formControlName="range"
+                (change)="onChecboxValueChange(range.title)">
+        <div class="range-option px-2 ">{{range.title}}</div>
+    </section>
 </form>

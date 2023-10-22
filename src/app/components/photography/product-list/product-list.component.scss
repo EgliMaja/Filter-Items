@@ -5,11 +5,13 @@
   height: 514px;
   padding: 33px;
 }
-.mat-img{
+
+.mat-img {
   position: relative;
   display: inline-block;
 }
-.mat-btn{
+
+.mat-btn {
   background-color: black;
   color: white;
   width: 250px;
@@ -28,23 +30,27 @@
   opacity: 1;
 }
 
-.img-category{
+.img-category {
   font-weight: 700;
   font-size: 22px;
 }
-.img-name{
+
+.img-name {
   font-weight: 700;
   font-size: 34px;
 }
-.img-price{
+
+.img-price {
   font-size: 29px;
   font-weight: 400;
 }
-.overlay-text{
+
+.overlay-text {
   width: 127.4px;
   height: 29.17px;
 }
-.text-overlay-img{
+
+.text-overlay-img {
   font-size: 20px;
   font-family: Inter;
   font-weight: 400;
@@ -57,33 +63,33 @@
 }
 
 @media (max-width: 600px) {
- .example-card{
-   max-width: 430px !important;
-   height: 500px;
-   margin-left: -100px;
-   border: none;
- }
-  .mat-img{
+  .example-card {
+    max-width: 430px !important;
+    height: 500px;
+    margin-left: -100px;
+    border: none;
+  }
+  .mat-img {
     width: 400px;
   }
-  .mat-btn{
+  .mat-btn {
     bottom: 137px;
     width: 400px;
   }
-  .img-price{
+  .img-price {
     font-size: 31.55px;
   }
-  .text-overlay-img{
+  .text-overlay-img {
     bottom: 435px;
   }
-  .about-product{
+  .about-product {
     margin-top: -10px;
   }
-  .pagination{
+  .pagination {
     align-items: center;
     margin-left: -100px;
   }
-  img{
+  img {
     background-size: cover;
   }
 }

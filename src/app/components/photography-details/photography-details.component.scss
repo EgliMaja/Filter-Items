@@ -1,43 +1,46 @@
-.about-image-name, .text-about-selling{
+.about-image-name, .text-about-selling {
   font-size: 20px;
   font-weight: 700;
 }
-strong{
+
+strong {
   font-size: 22px;
   font-weight: 700;
 }
-.best-sales-img{
+
+.best-sales-img {
   width: 117px;
   line-height: 147px;
   margin-left: 15px;
 }
+
 @media (max-width: 600px) {
-  .col-7{
+  .col-7 {
     width: 550px;
   }
-  .col-5{
+  .col-5 {
     width: 100%;
   }
-  .about-image-name{
+  .about-image-name {
     width: 382px;
     height: 99px;
     font-size: 22px;
     margin-top: -280px;
   }
-  .img-title{
-  visibility: hidden;
+  .img-title {
+    visibility: hidden;
   }
-  .img-description{
+  .img-description {
     margin-top: -280px;
   }
-  .text-about-selling{
+  .text-about-selling {
     text-align: start;
   }
-  .group-best-sales{
+  .group-best-sales {
     display: flex;
     justify-content: center;
   }
-  .text-secondary , .Details{
+  .text-secondary, .Details {
     text-align: start;
   }
 }
